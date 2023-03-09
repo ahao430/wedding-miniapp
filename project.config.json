@@ -1,0 +1,60 @@
+{
+	"cloudfunctionRoot": "cloudfunctions/",
+	"miniprogramRoot": "miniprogram/",
+	"description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+	"packOptions": {
+		"ignore": [],
+		"include": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": false,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": false,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"lazyloadPlaceholderEnable": false,
+		"useMultiFrameRuntime": true,
+		"useApiHook": true,
+		"useApiHostProcess": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"enableEngineNative": false,
+		"useIsolateContext": true,
+		"userConfirmedBundleSwitch": false,
+		"packNpmManually": false,
+		"packNpmRelationList": [],
+		"minifyWXSS": true,
+		"showES6CompileOption": false,
+		"useSummerCompiler": false,
+		"minifyWXML": true,
+		"disableUseStrict": false,
+		"useCompilerPlugins": false,
+		"useStaticServer": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.19.1",
+	"appid": "wx4933881d0ca4e633",
+	"projectname": "%E9%82%80%E8%AF%B7%E5%87%BD",
+	"condition": {},
+	"srcMiniprogramRoot": "miniprogram/",
+	"editorSetting": {
+		"tabIndent": "tab",
+		"tabSize": 2
+	},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate/"
+}

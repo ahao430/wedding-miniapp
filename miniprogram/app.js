@@ -44,6 +44,7 @@ App({
    * @param {*} obj 传入对象
    */
   async call (obj) {
+    console.log('【发起云函数调用】', obj)
     try {
       const cloud = await this.cloud()
       const res = await cloud.callFunction({ // 调用云函数
@@ -54,25 +55,7 @@ App({
         }
       })
 			console.log('【云函数调用成功】', res)
-			if (res.result.name === 'invite') {
-				if (res.result.data !== false) { // 如果返回值不为false，则证明正常访问
-					return res.result.data
-				} else { // 否则
-					wx.hideLoading()
-					wx.showModal({ // 提示一下
-						content: '函数服务没有支持该操作！',
-						showCancel: false
-					})
-				}
-			} else {
-				// 不同模版的云函数服务均共享quickstartFunctions名字
-				// 如果你访问部署多个时，会出现此问题，重新部署即可
-				wx.hideLoading()
-				wx.showModal({
-					content: '云函数quickstartFunctions被其他模版覆盖，请更新上传西数后再次体验',
-					showCancel: false
-				})
-			}
+      return res.result.data
     } catch (e) { // 网络问题出现
       console.error('【云函数调用失败】', e.toString())
       wx.hideLoading()
@@ -81,5 +64,12 @@ App({
         showCancel: false
       })
     }
-  }
+  },
+
+  toast (text) {
+    wx.showToast({
+      icon: 'none',
+      title: text,
+    })
+  },
 })

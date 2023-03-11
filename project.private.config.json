@@ -3,5 +3,18 @@
 	"projectname": "wedding-miniapp",
 	"setting": {
 		"compileHotReLoad": true
+	},
+	"condition": {
+		"miniprogram": {
+			"list": [
+				{
+					"name": "留言",
+					"pathName": "pages/message/index",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				}
+			]
+		}
 	}
 }

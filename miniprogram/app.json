@@ -3,7 +3,7 @@
 		"pages/index/index",
 		"pages/gallery/index",
 		"pages/contact/index",
-		"pages/board/index"
+		"pages/message/index"
 	],
 	"window": {
 		"navigationBarTextStyle": "black",
@@ -15,10 +15,10 @@
     "backgroundColor": "#FFC0CB",
     "borderStyle": "white",
     "list": [
-      {"pagePath": "pages/index/index", "text": "请柬", "iconPath": "images/invite.png", "selectedIconPath": "images/invite.png"},
-      {"pagePath": "pages/gallery/index", "text": "看照片", "iconPath": "images/photos.png", "selectedIconPath": "images/photos.png"},
-      {"pagePath": "pages/board/index", "text": "祝福", "iconPath": "images/message.png", "selectedIconPath": "images/message.png"},
-      {"pagePath": "pages/contact/index", "text": "来参加", "iconPath": "images/hotel.png", "selectedIconPath": "images/hotel.png"}
+      {"pagePath": "pages/index/index", "text": "请柬", "iconPath": "images/icons/invite.png", "selectedIconPath": "images/icons/invite.png"},
+      {"pagePath": "pages/gallery/index", "text": "看照片", "iconPath": "images/icons/photos.png", "selectedIconPath": "images/icons/photos.png"},
+      {"pagePath": "pages/message/index", "text": "祝福", "iconPath": "images/icons/message.png", "selectedIconPath": "images/icons/message.png"},
+      {"pagePath": "pages/contact/index", "text": "来参加", "iconPath": "images/icons/hotel.png", "selectedIconPath": "images/icons/hotel.png"}
     ]
   },
 	"style": "v2",

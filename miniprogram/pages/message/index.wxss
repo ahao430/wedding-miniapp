@@ -1,0 +1,90 @@
+.message-page{
+  padding-top: 160rpx;
+  padding-bottom: 100px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
+}
+.message-page .bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.message-list{
+  position: relative;
+  z-index: 2;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+.message-item{
+  background: #FFF;
+  padding: 20rpx;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+  margin: 20rpx 0;
+}
+.message-item .info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+.message-item .info .name{}
+.message-item .text{
+  width: 100%;
+  word-break: break-all;
+  box-sizing: border-box;
+  background: lightgreen;
+  padding: 10rpx 15rpx;
+  border-radius: 10rpx;
+  line-height: 1.5;
+}
+
+.add-message{
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  height: 140rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+  background: #FFF;
+}
+.add-message .nickname{
+  flex: 0 0 auto;
+  width: 130rpx;
+  height: 100rpx;
+  margin: 0;
+  padding: 0 20rpx;
+  margin-right: 10rpx;
+  border: 1px solid #CCC;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10rpx;
+}
+.add-message .input{
+  border: 1px solid #CCC;
+  flex: 1;
+  height: 100rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  border-radius: 10rpx;
+}
+.add-message .btn{
+  flex: 0 0 auto;
+  width: 180rpx;
+  height: 100rpx;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 100rpx;
+  background-color: red;
+  color: #FFF;
+  margin-left: 10rpx;
+}

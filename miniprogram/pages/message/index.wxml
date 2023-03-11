@@ -1,0 +1,22 @@
+<wxs src="../../tools.wxs" module="tools" />
+
+<view class="message-page">
+  <image class="bg" src="/images/pink_bg.png" mode="widthFix"></image>
+  <view class="message-list">
+    <view class="message-item" wx:for="{{list}}" wx:key="{{index}}">
+      <view class="info">
+        <text class="name">{{ item.nickname}}：</text>
+        <view class="time">{{tools.dateFormat(item.time)}}</view>
+      </view>
+      <view class="text">{{ item.text}}</view>
+    </view>
+  </view>
+  <view id="bottom"></view>
+
+  <view class="add-message">
+    <input type="nickname" class="nickname" placeholder="姓名" bindinput="oninputname" value="{{nickname}}"/>
+    <input class="input" type="text" placeholder="对新人的祝福" bindinput="oninput"/>
+    <button class="btn" loading="{{loading}}" disabled="{{loading}}" bindtap="handleAddMessage">留言</button>
+  </view>
+
+</view>

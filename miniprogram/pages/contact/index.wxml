@@ -1,0 +1,6 @@
+<view class="page-contact">
+
+  <map class="map" latitude="{{address.point[0]}}" longitude="{{address.point[1]}}" enable-3D="true" enable-building="true" markers="{{[address.marker]}}" show-location="true" data-address="{{address}}" bindmarkertap="goTo"></map>
+
+  <map class="map" latitude="{{address2.point[0]}}" longitude="{{address2.point[1]}}" enable-3D="true" enable-building="true" markers="{{[address2.marker]}}" show-location="true" data-address="{{address2}}" bindmarkertap="goTo"></map>
+</view>

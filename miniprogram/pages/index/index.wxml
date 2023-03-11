@@ -1,66 +1,22 @@
 <view bindtouchstart="movepage" bindtouchend="movepage" class="container">
   <view class="model" wx:if="{{spage==0||epage==0}}">
-    <image src="../../images/top_s.png"></image>
-    <view class="top_black"></view>
-    <view class="top_title">{{info.start.title}}</view>
-    <view class="top_local">{{info.start.local}}</view>
-    <view class="top_time">{{info.start.time}}</view>
-    <view class="top_hold">{{info.start.hold}}</view>
+    <image src="../../images/red_bg.webp"></image>
+
   </view>
   <view class="model {{spage!=1?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}}" wx:if="{{spage==1||epage==1}}">
-    <image src="../../images/main_s.png"></image>
-    <view class="main_title">诚挚邀请</view>
-    <view class="main_entil">INVITATIONLETTER</view>
-    <view class="invite_title">{{info.invite.title}}</view>
-    <view class="invite_text">{{info.invite.text}}</view>
+    <image src="../../images/red_bg.webp"></image>
+
   </view>
   <view class="model {{spage!=2?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}}" wx:if="{{spage==2||epage==2}}">
-    <image src="../../images/main_s.png"></image>
-    <view class="main_title">会议流程</view>
-    <view class="main_entil">MEETINGFLOW</view>
-    <view class="metting_model">
-      <view class="line"></view>
-      <view class="item" wx:for="{{info.meeting}}" wx:key="index">
-        <view class="item_text">{{item.time}}</view>
-        <image src="../../images/point.svg"></image>
-        <view class="item_text">{{item.text}}</view>
-      </view>
-    </view>
+    <image src="../../images/red_bg.webp"></image>
+
   </view>
   <view class="model {{spage!=3?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}}" wx:if="{{spage==3||epage==3}}">
-    <image src="../../images/main_s.png"></image>
-    <view class="main_title">活动地址</view>
-    <view class="main_entil">ADDRESS</view>
-    <map class="map" latitude="{{info.address.point[0]}}" longitude="{{info.address.point[1]}}" enable-3D="true" enable-building="true" markers="{{[info.address.marker]}}" show-location="true" catchregionchange="changeno"></map>
-    <view class="map_line"></view>
-    <view class="address_item">
-      <image src="../../images/map.svg"></image>
-      <view>{{info.address.local}}</view>
-    </view>
-    <view class="address_item">
-      <image src="../../images/time.svg"></image>
-      <view>{{info.address.time}}</view>
-    </view>
-    <view class="address_item">
-      <image src="../../images/tel.svg"></image>
-      <view>{{info.address.tel}}</view>
-    </view>
+    <image src="../../images/red_bg.webp"></image>
+
   </view>
   <view class="model {{spage!=4?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}}" wx:if="{{spage==4||epage==4}}">
-    <image src="../../images/main_s.png"></image>
-    <view class="main_title">会议报名</view>
-    <view class="main_entil">REGISTRATION</view>
-    <view class="form" bindtouchstart="changeno" bindtouchend="changeno" wx:if="{{status==0}}">
-      <view class="form_item" wx:for="{{info.form}}" wx:key="index">
-        <view>{{item.name}}</view>
-        <input bindinput="oninput" data-key="{{index}}" placeholder="{{item.place}}" placeholder-class="place" cursor-spacing="20"/>
-      </view>
-      <button bindtap="submit">提交</button>
-    </view>
-    <view class="review">
-      <image src="{{info.review[status].image}}"></image>
-      <view class="title">{{info.review[status].title}}</view>
-      <view class="des">{{info.review[status].des}}</view>
-    </view>
+    <image src="../../images/red_bg.webp"></image>
+
   </view>
 </view>

@@ -33,9 +33,14 @@ Component({
           playing: !this.audio.paused,
         })
       } else {
+        // 当点击图片预览时，触发app.onhide,音频停止播放
         this.audio = wx.createInnerAudioContext({
           useWebAudioImplement: false
         })
+
+        // 背景音频
+        // this.audio = wx.getBackgroundAudioManager()
+
         const src = app.globalData.imgPath + app.randomPick(this.data.audioList)
         this.audio.src = src
         app.audio = this.audio

@@ -23,6 +23,7 @@
   },
 	"style": "v2",
 	"sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": ["audio"],
   "usingComponents": {
     "player": "components/player/index"
   }

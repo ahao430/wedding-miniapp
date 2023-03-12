@@ -1,0 +1,32 @@
+.player{
+  position: fixed;
+  z-index: 9999;
+  right: 30rpx;
+  top: 200rpx;
+}
+
+.player image{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.player image.playing{
+  animation: rotate 3s linear infinite;
+}
+
+.player .btn-toggle{
+  background: rgba(0,0,0,0.5);
+  border-radius: 20rpx;
+  text-align: center;
+  font-size: 28rpx;
+  padding: 8rpx 5rpx;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

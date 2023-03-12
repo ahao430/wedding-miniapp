@@ -1,0 +1,4 @@
+<view class="player">
+  <image class="{{playing ? 'playing' : ''}}" src="/images/icons/play.png" bindtap="handlePlay"></image>
+  <view wx:if="{{playing}}" bindtap="handleChange" class="btn-toggle">切歌</view>
+</view>

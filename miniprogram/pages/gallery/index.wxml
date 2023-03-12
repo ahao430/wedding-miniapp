@@ -17,4 +17,6 @@
       <image wx:for="{{group.children}}" wx:key="index" class="img" src="{{tools.img(group.path, item)}}" mode="widthFix" lazy-load data-index="{{index}}" bindtap="handlePreview"></image>
     </view>
   </view>
+
+   <player></player>
 </view>  

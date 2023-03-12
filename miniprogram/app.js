@@ -4,12 +4,14 @@ App({
   flag: false,
 
   globalData: {
-    imgPath: 'cloud://cloud1-8g01fkyce74b39c8.636c-cloud1-8g01fkyce74b39c8-1313983323/',
+    imgPath,
   },
+  audio: null,
 
   async onLaunch (e) {
     this.initcloud()
   },
+
   /**
    * 初始化云开发环境（支持环境共享和正常两种模式）
    */

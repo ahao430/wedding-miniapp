@@ -18,5 +18,6 @@
     <input class="input" type="text" placeholder="对新人的祝福" bindinput="oninput"/>
     <button class="btn" loading="{{loading}}" disabled="{{loading}}" bindtap="handleAddMessage">留言</button>
   </view>
-
+  
+ <player></player>
 </view>

@@ -74,4 +74,6 @@
       <view class="btn-zhufu" bindtap="handleLeaveMessage">写下祝福</view>
     </view>
   </view>
+
+  <player></player>
 </view>

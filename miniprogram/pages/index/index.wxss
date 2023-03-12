@@ -224,8 +224,9 @@ page {
   margin-top: 20rpx;
 }
 .model-4 .btn-zhufu{
-  margin: 0 auto;
-  margin-top: 870rpx;
+  position: absolute;
+  bottom: 110rpx;
+  left: 175rpx;
   font-size: 36rpx;
   background: linear-gradient(135deg,#ff587e,#ff264a);
   color: #fff;

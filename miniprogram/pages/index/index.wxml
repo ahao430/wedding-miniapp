@@ -2,7 +2,7 @@
 
 <view bindtouchstart="movepage" bindtouchend="movepage" class="container">
   <view class="model model-0" wx:if="{{spage==0||epage==0}}">
-    <image class="bg" src="../../images/red_bg.webp"></image>
+    <image class="bg" src="../../images/red_bg.png"></image>
     <view class="content">
       <image class="wedding" src="../../images/words/wedding.png"></image>
       <image class="youare" src="../../images/words/youare.png"></image>
@@ -20,7 +20,7 @@
 
   <view class="model model-1 {{spage!=1?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === 1 ? 'active' : ''}}" wx:if="{{spage==1||epage==1}}">
     <!-- 照片，中式 -->
-    <image class="bg" src="../../images/red_bg.webp"></image>
+    <image class="bg" src="../../images/red_bg.png"></image>
     <view class="content">
       <image class="pic1" src="{{tools.img('chinese/8.jpg')}}" mode="widthFix"></image>
       <image class="pic2" src="{{tools.img('chinese/11.jpg')}}" mode="widthFix"></image>
@@ -29,7 +29,7 @@
   </view>
   <view class="model model-2 {{spage!=2?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === 2 ? 'active' : ''}}" wx:if="{{spage==2||epage==2}}">
     <!-- 照片，西式 -->
-    <image class="bg" src="../../images/red_bg.webp"></image>
+    <image class="bg" src="../../images/red_bg.png"></image>
     <view class="content">
       <image class="pic1" src="{{tools.img('west/30.jpg')}}" mode="widthFix"></image>
       <image class="pic2" src="{{tools.img('west/34.jpg')}}" mode="widthFix"></image>
@@ -39,7 +39,7 @@
   </view>
   <view class="model model-3 {{spage!=3?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === 3 ? 'active' : ''}}" wx:if="{{spage==3||epage==3}}">
     <!-- 时间、地点 -->
-    <image class="bg" src="../../images/red_bg.webp"></image>
+    <image class="bg" src="../../images/red_bg.png"></image>
     <view class="content">
       <view class="title-1">恭候光临</view>
       <view class="title-2">WEDDING INVITATION</view>

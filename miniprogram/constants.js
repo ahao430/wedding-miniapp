@@ -1,0 +1,1 @@
+export const imgPath = 'cloud://cloud1-8g01fkyce74b39c8.636c-cloud1-8g01fkyce74b39c8-1313983323/'

@@ -3,7 +3,7 @@
 <view class="message-page">
   <image class="bg" src="/images/pink_bg.png" mode="widthFix"></image>
   <view class="message-list">
-    <view class="message-item" wx:for="{{list}}" wx:key="{{index}}">
+    <view class="message-item" wx:for="{{list}}" wx:key="index">
       <view class="info">
         <text class="name">{{ item.nickname}}：</text>
         <view class="time">{{tools.dateFormat(item.time)}}</view>

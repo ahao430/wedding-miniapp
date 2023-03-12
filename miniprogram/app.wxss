@@ -1,0 +1,3 @@
+body{
+  font-family: PingFangSC-Regular,system-ui,Segoe UI,Roboto,Emoji,Oxygen,Arial,BlinkMacSystemFont,Helvetica Neue,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,-apple-system;
+}

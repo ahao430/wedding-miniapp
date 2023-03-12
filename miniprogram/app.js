@@ -1,5 +1,12 @@
+import {imgPath} from './constants'
+
 App({
   flag: false,
+
+  globalData: {
+    imgPath: 'cloud://cloud1-8g01fkyce74b39c8.636c-cloud1-8g01fkyce74b39c8-1313983323/',
+  },
+
   async onLaunch (e) {
     this.initcloud()
   },
@@ -71,5 +78,20 @@ App({
       icon: 'none',
       title: text,
     })
+  },
+
+  img (path, name) {
+    if (name && path) {
+      return imgPath + path + '/' + name
+    } else if (path) {
+      return imgPath + path
+    } else {
+      return ''
+    }
+  },
+
+  randomPick (arr = []) {
+    const randomIndex = Math.floor(Math.random() * arr.length)
+    return arr[randomIndex]
   },
 })

@@ -13,6 +13,13 @@
 					"query": "",
 					"launchMode": "default",
 					"scene": null
+				},
+				{
+					"name": "画廊",
+					"pathName": "pages/gallery/index",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
 				}
 			]
 		}

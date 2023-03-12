@@ -1,0 +1,20 @@
+<wxs src="../../tools.wxs" module="tools" />
+
+<view class="page-gallery">
+  <image class="bg" src="{{tools.img(bg)}}" mode="aspectFill"></image>
+  <view class="group-list">
+    <view class="group" wx:for="{{images}}" wx:key="index" data-index="{{index}}" bindtap="handleClickGroup">
+      <image class="bg" src="{{tools.img(item.path, item.bg)}}" mode="aspectFill"></image>
+      <view class="title">{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class="group-gallery" hidden="{{!showGallery}}">
+    <view class="close">
+      <image src="/images/icons/close.png" catchtap="handleCloseGroup"></image>
+    </view>
+    <view class="list">
+      <image wx:for="{{group.children}}" wx:key="index" class="img" src="{{tools.img(group.path, item)}}" mode="widthFix" lazy-load data-index="{{index}}" bindtap="handlePreview"></image>
+    </view>
+  </view>
+</view>  

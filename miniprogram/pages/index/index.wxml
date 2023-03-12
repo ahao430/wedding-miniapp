@@ -1,22 +1,77 @@
+<wxs src="../../tools.wxs" module="tools" />
+
 <view bindtouchstart="movepage" bindtouchend="movepage" class="container">
-  <view class="model" wx:if="{{spage==0||epage==0}}">
-    <image src="../../images/red_bg.webp"></image>
-
+  <view class="model model-0" wx:if="{{spage==0||epage==0}}">
+    <image class="bg" src="../../images/red_bg.webp"></image>
+    <view class="content">
+      <image class="wedding" src="../../images/words/wedding.png"></image>
+      <image class="youare" src="../../images/words/youare.png"></image>
+      <image class="left-xi" src="../../images/words/xi.png"></image>
+      <image class="right-xi" src="../../images/words/xi.png"></image>
+      <image class="wujiayouxi" src="../../images/words/wujiayouxi.png"></image>
+      <view class="couple">
+        <view class="husband">王  昊</view>
+        <view class="middle">&</view>
+        <view class="wife">吴凤媛</view>
+      </view>
+      <view class="invite">诚邀前来参加我们的婚礼</view>
+    </view>
   </view>
-  <view class="model {{spage!=1?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}}" wx:if="{{spage==1||epage==1}}">
-    <image src="../../images/red_bg.webp"></image>
 
+  <view class="model model-1 {{spage!=1?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === 1 ? 'active' : ''}}" wx:if="{{spage==1||epage==1}}">
+    <!-- 照片，中式 -->
+    <image class="bg" src="../../images/red_bg.webp"></image>
+    <view class="content">
+      <image class="pic1" src="{{tools.img('chinese/8.jpg')}}" mode="widthFix"></image>
+      <image class="pic2" src="{{tools.img('chinese/11.jpg')}}" mode="widthFix"></image>
+      <image class="pic3" src="{{tools.img('chinese/4.jpg')}}" mode="widthFix"></image>
+    </view>
   </view>
-  <view class="model {{spage!=2?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}}" wx:if="{{spage==2||epage==2}}">
-    <image src="../../images/red_bg.webp"></image>
-
+  <view class="model model-2 {{spage!=2?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === 2 ? 'active' : ''}}" wx:if="{{spage==2||epage==2}}">
+    <!-- 照片，西式 -->
+    <image class="bg" src="../../images/red_bg.webp"></image>
+    <view class="content">
+      <image class="pic1" src="{{tools.img('west/30.jpg')}}" mode="widthFix"></image>
+      <image class="pic2" src="{{tools.img('west/34.jpg')}}" mode="widthFix"></image>
+      <image class="pic3" src="{{tools.img('west/33.jpg')}}" mode="widthFix"></image>
+      <view class="btn-more" bindtap="handleGoGallery">更多</view>
+    </view>
   </view>
-  <view class="model {{spage!=3?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}}" wx:if="{{spage==3||epage==3}}">
-    <image src="../../images/red_bg.webp"></image>
+  <view class="model model-3 {{spage!=3?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === 3 ? 'active' : ''}}" wx:if="{{spage==3||epage==3}}">
+    <!-- 时间、地点 -->
+    <image class="bg" src="../../images/red_bg.webp"></image>
+    <view class="content">
+      <view class="title-1">恭候光临</view>
+      <view class="title-2">WEDDING INVITATION</view>
 
+      <view class="part-1">
+        <view class="part-title">出嫁宴</view>
+        <view>2023年04月09日 15:00</view>
+        <view>农历：闰二月十九（星期日）</view>
+        <view>南华里凤凰县国际酒店（凤凰县政府宾馆）</view>
+        <view class="btn-go" data-target="wife" bindtap="handleGoMap">去参加</view>
+      </view>
+
+      <view class="part-2">
+        <view class="part-title">婚礼</view>
+        <view>2023年04月12日 12:00</view>
+        <view>农历：闰二月廿二（星期三）</view>
+        <view>信阳德龙太子酒店</view>
+        <view class="btn-go" data-target="husband" bindtap="handleGoMap">去参加</view>
+      </view>
+    </view>
   </view>
-  <view class="model {{spage!=4?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}}" wx:if="{{spage==4||epage==4}}">
-    <image src="../../images/red_bg.webp"></image>
+  <view class="model model-4 {{spage!=4?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === 4 ? 'active' : ''}}" wx:if="{{spage==4||epage==4}}">
+    <!-- 邀请函，引导 -->
+    <image class="bg" src="../../images/pink_bg.png"></image>
+    <image class="xi" src="../../images/xi_bg.png" mode="widthFix"></image>
+    <image class="cover" src="../../images/packet_bottom.png"></image>
 
+    <view class="content">
+      <view class="title-1">婚礼邀请</view>
+      <view class="title-2">王  昊 & 吴凤媛</view>
+
+      <view class="btn-zhufu" bindtap="handleLeaveMessage">写下祝福</view>
+    </view>
   </view>
 </view>

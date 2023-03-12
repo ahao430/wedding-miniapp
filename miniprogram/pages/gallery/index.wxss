@@ -1,0 +1,86 @@
+.page-gallery{
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  box-sizing: border-box;
+  padding: 450rpx 60rpx 60rpx;
+  position: relative;
+}
+.page-gallery .bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.group-list{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 40rpx;
+}
+
+.group{
+  background: #CCC;
+  border-radius: 10rpx;
+  text-align: center;
+  position: relative;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.group .bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.group .title{
+  position: absolute;
+  top: 60rpx;
+  left: 0;
+  right: 0;
+  color: gold;
+  /* font-style: italic; */
+  letter-spacing: 20rpx;
+  font-size: 40rpx;
+  text-shadow: 2rpx 2rpx 20rpx #FFF;
+}
+
+.group-gallery{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFF;
+  overflow: auto;
+  box-sizing: border-box;
+  padding-bottom: 40rpx;
+}
+
+.group-gallery .close{
+  position: fixed;
+  left: 50%;
+  bottom: 20rpx;
+  padding: 20rpx;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.group-gallery .close image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.group-gallery .list{
+  column-count: 2;
+  font-size: 0;
+}
+.group-gallery .list .img{
+  width: 50vw;
+}

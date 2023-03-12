@@ -43,6 +43,18 @@ var dateFormat = function (timestamp, format) {
   return format;
 }
 
+var imgPath = 'cloud://cloud1-8g01fkyce74b39c8.636c-cloud1-8g01fkyce74b39c8-1313983323/'
+var getImgUrl = function (path, name) {
+  if (name && path) {
+    return imgPath + path + '/' + name
+  } else if (path) {
+    return imgPath + path
+  } else {
+    return ''
+  }
+}
+
 module.exports = {
   dateFormat: dateFormat,
+  img: getImgUrl,
 }

@@ -1,7 +1,7 @@
 .page-gallery{
   width: 100%;
   height: 100vh;
-  background-color: #000;
+  background-color: rgb(178, 47, 55);
   box-sizing: border-box;
   padding: 450rpx 60rpx 60rpx;
   position: relative;

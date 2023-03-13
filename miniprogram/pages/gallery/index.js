@@ -45,4 +45,7 @@ Page({
       current: url,
     })
   },
+
+  onShareAppMessage: app.onShareAppMessage,
+  onShareTimeline: app.onShareTimeline,
 })

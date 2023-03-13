@@ -101,49 +101,61 @@ page {
 }
 
 .model-1{}
-.model-1.active .pic1{
-  animation: slide-from-left 2s ease-out both;
+.model-1 .pic1{
   position: absolute;
   left: 0;
   top: 100rpx;
   width: 400rpx;
 }
-.model-1.active .pic2{
-  animation: slide-from-right 2s ease-out both 1s;
+.model-1.active .pic1{
+  animation: slide-from-left 1s ease-out both;
+}
+.model-1 .pic2{
   position: absolute;
   right: 0;
   top: 400rpx;
   width: 400rpx;
 }
-.model-1.active .pic3{
-  animation: fade-in 2s ease-out both 3s;
+.model-1.active .pic2{
+  animation: slide-from-right 1s ease-out both 1s;
+}
+.model-1 .pic3{
   position: absolute;
   bottom: 100rpx;
   left: 0;
   width: 750rpx;
 }
+.model-1.active .pic3{
+  animation: fade-in 2s ease-out both 3s;
+}
 
 .model-2{}
-.model-2.active .pic1{
-  animation: slide-from-left 2s ease-out both;
+.model-2 .pic1{
   position: absolute;
   left: 0;
   top: 100rpx;
   width: 500rpx;
 }
-.model-2.active .pic2{
-  animation: slide-from-right 2s ease-out both 1s;
+.model-2.active .pic1{
+  animation: slide-from-left 1s ease-out both;
+}
+.model-2 .pic2{
   position: absolute;
   right: 0;
   top: 220rpx;
   width: 500rpx;
 }
-.model-2.active .pic3{
-  animation: slide-from-left 2s ease-out both 2s;
+.model-2.active .pic2{
+  animation: slide-from-right 1s ease-out both 1s;
+}
+.model-2 .pic3{
   position: absolute;
   bottom: 120rpx;
   left: 0;
   width: 750rpx;
+}
+.model-2.active .pic3{
+  animation: slide-from-left 2s ease-out both 2s;
 }
 .model-2 .btn-more{
   position: absolute;
@@ -159,27 +171,50 @@ page {
 }
 
 .model-3{}
-.model-3.active .title-1{
+.model-3 .title-1{
   margin-top: 200rpx;
   font-size: 40rpx;
   font-weight: bold;
+}
+.model-3.active .title-1{
   animation: slide-from-top 1s ease-out both;
+}
+.model-3 .map{
+  margin: 0 auto;
+  margin-top: 120rpx;
+  margin-left: 175rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 400rpx;
+  height: 400rpx;
+}
+.model-3.active .map{
+  animation: slide-from-top 1s ease-out both;
+}
+
+.model-3 .title-2{
+  font-weight: bold;
 }
 .model-3.active .title-2{
-  font-weight: bold;
   animation: slide-from-top 1s ease-out both;
 }
-.model-3.active .part-1{
+.model-3 .part-1{
   margin-top: 240rpx;
-  animation: fade-in 2s ease-out both 1s;
+  line-height: 1.5;
+  position: relative;
+}
+.model-3.active .part-1{
+  animation: fade-in 1s ease-out both 1s;
+}
+.model-3 .part-2{
+  margin-top: 120rpx;
   line-height: 1.5;
   position: relative;
 }
 .model-3.active .part-2{
-  margin-top: 200rpx;
-  animation: fade-in 2s ease-out both 3s;
-  line-height: 1.5;
-  position: relative;
+  animation: fade-in 1s ease-out both 1s;
 }
 .model-3 .btn-go{
   margin: 0 auto;

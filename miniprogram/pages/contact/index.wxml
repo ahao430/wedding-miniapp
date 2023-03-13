@@ -1,8 +1,16 @@
 <view class="page-contact">
+  <image lazy-load class="bg" src="../../images/red_bg.png" mode="widthFix"></image>
 
-  <map class="map" latitude="{{address.point[0]}}" longitude="{{address.point[1]}}" enable-3D="true" enable-building="true" markers="{{[address.marker]}}" show-location="true" data-address="{{address}}" bindmarkertap="goTo"></map>
-
-  <map class="map" latitude="{{address2.point[0]}}" longitude="{{address2.point[1]}}" enable-3D="true" enable-building="true" markers="{{[address2.marker]}}" show-location="true" data-address="{{address2}}" bindmarkertap="goTo"></map>
-
-   <player></player>
+  <view class="content">    
+    <map class="map" latitude="{{address.point[0]}}" longitude="{{address.point[1]}}" enable-3D="true" enable-building="true" markers="{{[address.marker]}}" show-location="true" data-address="{{address}}" bindmarkertap="handleGoMap"></map>
+  
+    <view class="info">
+      <view>2023年04月12日 12:00</view>
+      <view>农历：闰二月廿二（星期三）</view>
+      <view>信阳德龙太子酒店  浉河区沿河道与胜利南路交叉口西行300米（浉河公园南门）</view>
+      <view class="btn-go" data-target="husband" bindtap="handleGoMap">去参加</view>
+    </view>
+  
+     <player></player>
+  </view>
 </view>

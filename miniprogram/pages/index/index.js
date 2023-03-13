@@ -1,10 +1,14 @@
+import { wife_address, husband_address } from "../../constants"
+
 const app = getApp() // 全局APP
 let that = null // 页面this指针
+
 Page({
   data: {
     spage: 0, // 切换页面开始，勿改
     epage: 0, // 切换页面结束，勿改
     len: 5,
+    husband_address,
   },
 
   onLoad () {
@@ -32,7 +36,7 @@ Page({
         })
         that.startTimer()
       }
-    }, 5000)
+    }, 6000)
   },
   clearTimer () {
     if (this.timer) {
@@ -60,7 +64,7 @@ Page({
           spage: spage,
           epage: epage
         })
-        // that.startTimer()
+        that.startTimer()
       }
     }
   },
@@ -83,4 +87,16 @@ Page({
       url: `/pages/message/index`
     })
   },
+
+  goTo (e) {
+    const {address} = e.target.dataset
+    wx.openLocation({
+      latitude: address.point[0],
+      longitude: address.point[1],
+      name: address.local
+    })
+  },
+
+  onShareAppMessage: app.onShareAppMessage,
+  onShareTimeline: app.onShareTimeline,
 })

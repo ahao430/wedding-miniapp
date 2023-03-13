@@ -124,6 +124,12 @@ App({
     })
   },
 
+  sleep (time = 0) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, time)
+    })
+  },
+
   onShareAppMessage () {
     return {
       title: '王昊和吴凤媛的婚礼',
@@ -135,7 +141,7 @@ App({
     return {
       title: '王昊和吴凤媛的婚礼',
       query: '',
-      imageUrl: '',
+      // imageUrl: '',
     }
   },
 })

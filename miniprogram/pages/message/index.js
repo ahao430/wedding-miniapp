@@ -71,5 +71,8 @@ Page({
       loading: false,
       message: '',
     })
-  }
+  },
+
+  onShareAppMessage: app.onShareAppMessage,
+  onShareTimeline: app.onShareTimeline,
 })

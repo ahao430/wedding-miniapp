@@ -54,7 +54,10 @@ Component({
         const src = app.globalData.imgPath + app.randomPick(this.data.audioList)
         this.audio.src = src
         app.audio = this.audio
-        this.handlePlay()
+
+        setTimeout(() => {
+          this.handlePlay()
+        }, 1000)
       }
     },
     async handlePlay () {
@@ -70,7 +73,7 @@ Component({
         })
       }
     },
-    async handleChange () {
+    handleChange () {
       const {audioList} = this.data
       let index = audioList.findIndex(item => app.globalData.imgPath + item === this.audio.src)
       if (index < audioList.length - 1) {
@@ -78,9 +81,10 @@ Component({
       } else {
         index = 0
       }
-      await this.audio.stop()
       this.audio.src = app.globalData.imgPath + audioList[index]
-      this.audio.play()
+      setTimeout(() => {
+        this.audio.play()
+      }, 1000)
     },
   },
 })

@@ -1,6 +1,43 @@
-.page-contact{}
+.page-contact{
+  background-color: rgb(178, 47, 55);
+  color: rgb(255, 212, 181);
+  position: relative;
+  min-height: 100vh;
+}
+
+.bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.content{
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
 
 .map{
   width: 750rpx;
   height: 750rpx;
+}
+
+
+.info{
+  text-align: center;
+  margin-top: 100rpx;
+  line-height: 1.5;
+}
+.btn-go{
+  margin: 0 auto;
+  margin-top: 40rpx;
+  font-size: 36rpx;
+  background: linear-gradient(135deg,#ff587e,#ff264a);
+  color: #fff;
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
 }

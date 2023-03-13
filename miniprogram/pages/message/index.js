@@ -21,8 +21,14 @@ Page({
       nickname,
     })
 
+    this.scroll()
+  },
+
+  scroll () {
+    const len = this.data.list.length
     wx.pageScrollTo({
-      selector: '#bottom'
+      selector: '#bottom',
+      duration: len * 1000,
     })
   },
 

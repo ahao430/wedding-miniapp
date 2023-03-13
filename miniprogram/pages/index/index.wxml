@@ -21,26 +21,14 @@
     </view>
   </view>
 
-  <view class="model model-1 {{spage!=1?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === 1 ? 'active' : ''}}" wx:if="{{spage==1||epage==1}}">
-    <!-- 照片，中式 -->
-    <image lazy-load class="bg" src="../../images/red_bg.png"></image>
+  <view wx:for="{{pictures}}" wx:key="index" class="model model-pic {{spage != (index + 1) ?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === (index + 1) ? 'active' : ''}}" wx:if="{{spage == (index + 1) || epage == (index + 1) || epage == (index + 1) + 1}}">
+    <image lazy-load wx:if="{{item.bg}}" class="bg" src="../../images/red_bg.png"></image>
     <view class="content">
-      <image lazy-load class="pic1" src="{{tools.img('chinese/8.jpg')}}" mode="widthFix"></image>
-      <image lazy-load class="pic2" src="{{tools.img('chinese/11.jpg')}}" mode="widthFix"></image>
-      <image lazy-load class="pic3" src="{{tools.img('chinese/4.jpg')}}" mode="widthFix"></image>
+      <image wx:for="{{item.children}}" wx:for-item="subItem" wx:for-index="subIndex"  wx:key="index" lazy-load class="pic {{subItem.class}}" src="{{tools.img(subItem.src)}}" style="{{subItem.style}}" mode="{{subItem.mode || 'widthFix'}}"></image>
     </view>
   </view>
-  <view class="model model-2 {{spage!=2?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === 2 ? 'active' : ''}}" wx:if="{{spage==2||epage==2}}">
-    <!-- 照片，西式 -->
-    <image lazy-load class="bg" src="../../images/red_bg.png"></image>
-    <view class="content">
-      <image lazy-load class="pic1" src="{{tools.img('west/30.jpg')}}" mode="widthFix"></image>
-      <image lazy-load class="pic2" src="{{tools.img('west/34.jpg')}}" mode="widthFix"></image>
-      <image lazy-load class="pic3" src="{{tools.img('west/33.jpg')}}" mode="widthFix"></image>
-      <view class="btn-more" bindtap="handleGoGallery">更多</view>
-    </view>
-  </view>
-  <view class="model model-3 {{spage!=3?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === 3 ? 'active' : ''}}" wx:if="{{spage==3||epage==3}}">
+
+  <view class="model model-last-2 {{spage!= (len - 2) ?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage ===  (len - 2)  ? 'active' : ''}}" wx:if="{{spage== (len - 2) ||epage== (len - 2) }}">
     <!-- 时间、地点 -->
     <image lazy-load class="bg" src="../../images/red_bg.png"></image>
     <view class="content">
@@ -65,7 +53,7 @@
       </view>
     </view>
   </view>
-  <view class="model model-4 {{spage!=4?(spage<epage?'model_show':''):(spage<epage?'':'model_hide')}} {{epage === 4 ? 'active' : ''}}" wx:if="{{spage==4||epage==4}}">
+  <view class="model model-last-1 {{spage!=(len - 1)?(spage<epage?'model_show':''):(spage<epage?'model_hide':'')}} {{epage === (len - 1) ? 'active' : ''}}" wx:if="{{spage==(len - 1)||epage==(len - 1)}}">
     <!-- 邀请函，引导 -->
     <image lazy-load class="bg" src="../../images/pink_bg.png"></image>
     <image lazy-load class="xi" src="../../images/xi_bg.png" mode="widthFix"></image>
@@ -76,6 +64,7 @@
       <view class="title-2">王  昊 & 吴凤媛</view>
 
       <view class="btn-zhufu" bindtap="handleLeaveMessage">写下祝福</view>
+      <view class="btn-more" bindtap="handleGoGallery">更多照片</view>
     </view>
   </view>
 

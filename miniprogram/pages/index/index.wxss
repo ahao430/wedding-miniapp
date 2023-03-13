@@ -15,7 +15,7 @@ page {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  background-color: rgb(178, 47, 55);
+  /* background-color: rgb(178, 47, 55); */
 }
 .model_show {
   animation: slide-top 0.5s ease-out both;
@@ -100,86 +100,82 @@ page {
   animation: fade-in 1s ease-out both 3s;
 }
 
-.model-1{}
-.model-1 .pic1{
+.model-pic{}
+.model-pic .pic{
   position: absolute;
   left: 0;
-  top: 100rpx;
-  width: 400rpx;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
 }
-.model-1.active .pic1{
-  animation: slide-from-left 1s ease-out both;
+.model-pic.active .pic.left-in{
+  animation-name: slide-from-left;
 }
-.model-1 .pic2{
-  position: absolute;
-  right: 0;
-  top: 400rpx;
-  width: 400rpx;
+.model-pic.active .pic.right-in{
+  animation-name: slide-from-right;
 }
-.model-1.active .pic2{
-  animation: slide-from-right 1s ease-out both 1s;
+.model-pic.active .pic.top-in{
+  animation-name: slide-from-top;
 }
-.model-1 .pic3{
-  position: absolute;
-  bottom: 100rpx;
-  left: 0;
-  width: 750rpx;
+.model-pic.active .pic.bottom-in{
+  animation-name: slide-from-bottom;
 }
-.model-1.active .pic3{
-  animation: fade-in 2s ease-out both 3s;
+.model-pic.active .pic.fade-in{
+  animation-name: fade-in;
+}
+.model-pic.active .pic.scale-in{
+  animation-name: scale-in;
+}
+.model-pic.active .pic.delay-0_5s{
+  animation-delay: 0.5s;
+}
+.model-pic.active .pic.delay-1s{
+  animation-delay: 1s;
+}
+.model-pic.active .pic.delay-1_5s{
+  animation-delay: 1.5s;
+}
+.model-pic.active .pic.delay-2s{
+  animation-delay: 2s;
+}
+.model-pic.active .pic.delay-2_5s{
+  animation-delay: 2.5s;
+}
+.model-pic.active .pic.delay-3s{
+  animation-delay: 3s;
 }
 
-.model-2{}
-.model-2 .pic1{
-  position: absolute;
-  left: 0;
-  top: 100rpx;
-  width: 500rpx;
+.model-pic.active .pic.duration-0_5s{
+  animation-duration: 0.5s;
 }
-.model-2.active .pic1{
-  animation: slide-from-left 1s ease-out both;
+.model-pic.active .pic.duration-1s{
+  animation-duration: 1s;
 }
-.model-2 .pic2{
-  position: absolute;
-  right: 0;
-  top: 220rpx;
-  width: 500rpx;
+.model-pic.active .pic.duration-1_5s{
+  animation-duration: 1.5s;
 }
-.model-2.active .pic2{
-  animation: slide-from-right 1s ease-out both 1s;
+.model-pic.active .pic.duration-2s{
+  animation-duration: 2s;
 }
-.model-2 .pic3{
-  position: absolute;
-  bottom: 120rpx;
-  left: 0;
-  width: 750rpx;
+.model-pic.active .pic.duration-2_5s{
+  animation-duration: 2.5s;
 }
-.model-2.active .pic3{
-  animation: slide-from-left 2s ease-out both 2s;
-}
-.model-2 .btn-more{
-  position: absolute;
-  bottom: 20rpx;
-  left: 175rpx;
-  font-size: 36rpx;
-  background: linear-gradient(135deg,#ff587e,#ff264a);
-  color: #fff;
-  width: 400rpx;
-  height: 80rpx;
-  line-height: 80rpx;
-  border-radius: 80rpx;
+.model-pic.active .pic.duration-3s{
+  animation-duration: 2s;
 }
 
-.model-3{}
-.model-3 .title-1{
+.model-last-2{}
+.model-last-2 .title-1{
   margin-top: 200rpx;
   font-size: 40rpx;
   font-weight: bold;
 }
-.model-3.active .title-1{
+.model-last-2.active .title-1{
   animation: slide-from-top 1s ease-out both;
 }
-.model-3 .map{
+.model-last-2 .map{
   margin: 0 auto;
   margin-top: 120rpx;
   margin-left: 175rpx;
@@ -190,33 +186,33 @@ page {
   width: 400rpx;
   height: 400rpx;
 }
-.model-3.active .map{
+.model-last-2.active .map{
   animation: slide-from-top 1s ease-out both;
 }
 
-.model-3 .title-2{
+.model-last-2 .title-2{
   font-weight: bold;
 }
-.model-3.active .title-2{
+.model-last-2.active .title-2{
   animation: slide-from-top 1s ease-out both;
 }
-.model-3 .part-1{
+.model-last-2 .part-1{
   margin-top: 240rpx;
   line-height: 1.5;
   position: relative;
 }
-.model-3.active .part-1{
+.model-last-2.active .part-1{
   animation: fade-in 1s ease-out both 1s;
 }
-.model-3 .part-2{
+.model-last-2 .part-2{
   margin-top: 120rpx;
   line-height: 1.5;
   position: relative;
 }
-.model-3.active .part-2{
+.model-last-2.active .part-2{
   animation: fade-in 1s ease-out both 1s;
 }
-.model-3 .btn-go{
+.model-last-2 .btn-go{
   margin: 0 auto;
   margin-top: 10rpx;
   font-size: 36rpx;
@@ -228,21 +224,21 @@ page {
   border-radius: 80rpx;
 }
 
-.model-4{}
-.model-4 .xi{
+.model-last-1{}
+.model-last-1 .xi{
   position: absolute;
   left: 125rpx;
   bottom: 100rpx;
   width: 500rpx;
   border-radius: 40rpx;
 }
-.model-4 .cover{
+.model-last-1 .cover{
   position: absolute;
-  bottom: 40rpx;
+  bottom: 30rpx;
   left: 0;
   width: 100%;
 }
-.model-4 .content{
+.model-last-1 .content{
   z-index: 2;
   position: absolute;
   bottom: 50rpx;
@@ -250,22 +246,34 @@ page {
   width: 100%;
   color: #000;
 }
-.model-4 .title-1{
-  margin-top: 200rpx;
+.model-last-1 .title-1{
+  margin-top: 220rpx;
   font-weight: bold;
   font-size: 40rpx;
 }
-.model-4 .title-2{
+.model-last-1 .title-2{
   margin-top: 20rpx;
 }
-.model-4 .btn-zhufu{
+.model-last-1 .btn-zhufu{
   position: absolute;
-  bottom: 110rpx;
-  left: 175rpx;
+  bottom: 70rpx;
+  left: 110rpx;
   font-size: 36rpx;
   background: linear-gradient(135deg,#ff587e,#ff264a);
   color: #fff;
-  width: 400rpx;
+  width: 250rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+}
+.model-last-1 .btn-more{
+  position: absolute;
+  bottom: 70rpx;
+  right: 110rpx;
+  font-size: 36rpx;
+  background: linear-gradient(135deg,#ff587e,#ff264a);
+  color: #fff;
+  width: 250rpx;
   height: 80rpx;
   line-height: 80rpx;
   border-radius: 80rpx;

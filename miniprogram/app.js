@@ -123,4 +123,19 @@ App({
       })
     })
   },
+
+  onShareAppMessage () {
+    return {
+      title: '王昊和吴凤媛的婚礼',
+      path: 'pages/index/index',
+      // imageUrl: '',
+    }
+  },
+  onShareTimeline () {
+    return {
+      title: '王昊和吴凤媛的婚礼',
+      query: '',
+      imageUrl: '',
+    }
+  },
 })

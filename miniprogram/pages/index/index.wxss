@@ -197,26 +197,26 @@ page {
 .model-4 .xi{
   position: absolute;
   left: 125rpx;
-  bottom: 160rpx;
+  bottom: 100rpx;
   width: 500rpx;
   border-radius: 40rpx;
 }
 .model-4 .cover{
   position: absolute;
-  bottom: 80rpx;
+  bottom: 40rpx;
   left: 0;
   width: 100%;
 }
 .model-4 .content{
   z-index: 2;
   position: absolute;
-  bottom: 80rpx;
+  bottom: 50rpx;
   left: 0;
   width: 100%;
   color: #000;
 }
 .model-4 .title-1{
-  margin-top: 280rpx;
+  margin-top: 200rpx;
   font-weight: bold;
   font-size: 40rpx;
 }

@@ -2,7 +2,7 @@ import {imgPath} from './constants'
 
 App({
   flag: false,
-
+  config: null,
   globalData: {
     imgPath,
   },
@@ -31,6 +31,7 @@ App({
         }
         return this.c1 // 返回 cloud 对象
       }
+      this.afterInit()
     } else { // 如果 ext 配置文件存在，正常云开发模式
       if (normalinfo.length !== 0 && normalinfo[0].envId != null) { // 如果文件中 envlist 存在
         wx.cloud.init({ // 初始化云开发环境
@@ -41,11 +42,27 @@ App({
         this.cloud = () => {
           return wx.cloud // 直接返回 wx.cloud
         }
+        this.afterInit()
       } else { // 如果文件中 envlist 存在，提示要配置环境
         this.cloud = () => {
           throw new Error('当前小程序没有配置云开发环境，请在 envList.js 中配置你的云开发环境')
         }
+        this.afterInit()
       }
+    }
+  },
+  afterInit () {
+    this.getConfig()
+  },
+  async getConfig () {
+    if (this.config) {
+      return this.config
+    } else {
+      const res = await this.call({ // 发起云函数，提交信息
+        name: 'getConfig',
+      })
+      this.config = res || {}
+      return this.config
     }
   },
   /**
@@ -95,5 +112,15 @@ App({
   randomPick (arr = []) {
     const randomIndex = Math.floor(Math.random() * arr.length)
     return arr[randomIndex]
+  },
+
+  request (option = {}) {
+    return new Promise((resolve, reject) => {
+      wx.request({
+        ...option,
+        success: resolve,
+        fail: reject,
+      })
+    })
   },
 })

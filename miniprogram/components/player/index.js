@@ -10,10 +10,11 @@ Component({
       'audio/xiaoxiaoliange.mp3',
     ],
     playing: true,
+    showPlayer: false,
   },
   lifetimes: {
     attached () {
-      this.initAudio()
+      this.init()
     },
   },
   pageLifetimes: {
@@ -26,6 +27,15 @@ Component({
     },
   },
   methods: {
+    async init () {
+      const config = await app.getConfig()
+      if (config.music) {
+        this.setData({
+          showPlayer: true,
+        })
+        this.initAudio()
+      }
+    },
     initAudio () {
       if (app.audio) {
         this.audio = app.audio

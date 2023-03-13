@@ -1,4 +1,4 @@
-<view class="player">
+<view class="player" wx:if="{{showPlayer}}">
   <image class="{{playing ? 'playing' : ''}}" src="/images/icons/play.png" catchtap="handlePlay"></image>
   <view wx:if="{{playing}}" catchtap="handleChange" class="btn-toggle">切歌</view>
 </view>

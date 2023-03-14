@@ -197,7 +197,7 @@ Page({
           spage: spage,
           epage: epage,
         });
-        // that.startTimer()
+        that.startTimer()
       }
     }
   },

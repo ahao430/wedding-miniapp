@@ -5,6 +5,7 @@
   box-sizing: border-box;
   min-height: 100vh;
   position: relative;
+  background-color: rgb(178, 47, 55);
 }
 .message-page .bg{
   position: absolute;
@@ -25,66 +26,126 @@
   padding: 20rpx;
   font-size: 24rpx;
   border-radius: 10rpx;
-  /* margin: 20rpx 0; */
+  margin: 20rpx 0;
+  line-height: 1.5;
 }
-.message-item .info{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15rpx;
-}
-.message-item .info .name{}
+
 .message-item .text{
   width: 100%;
   word-break: break-all;
   box-sizing: border-box;
-  background: lightgreen;
   padding: 10rpx 15rpx;
   border-radius: 10rpx;
   line-height: 1.5;
 }
+.message-item .name{
+  text-align: right;
+  font-style: italic;
+}
+.message-item .time{
+  text-align: right;
+  font-style: italic;
+}
 
-.add-message{
+.btn-add-message{
   position: fixed;
   z-index: 3;
+  bottom: 40rpx;
+  right: 40rpx;
+  width: 120rpx;
+  height: 120rpx;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #FFF;
+  animation: breathe 1s linear infinite;
+}
+.btn-add-message image{
+  width: 100%;
+}
+
+.add-message-modal{
+  position: fixed;
+  z-index: 4;
   bottom: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  height: 140rpx;
-  box-sizing: border-box;
-  padding: 20rpx;
-  background: #FFF;
+  height: 880rpx;
+  transform: translateY(100%);
 }
-.add-message .nickname{
-  flex: 0 0 auto;
-  width: 130rpx;
-  height: 100rpx;
-  margin: 0;
-  padding: 0 20rpx;
-  margin-right: 10rpx;
-  border: 1px solid #CCC;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 10rpx;
+.add-message-modal .close{
+  position: absolute;
+  right: 0;
+  top: 0rpx;
+  width: 80rpx;
+  z-index: 5;
 }
-.add-message .input{
-  border: 1px solid #CCC;
-  flex: 1;
-  height: 100rpx;
-  box-sizing: border-box;
-  padding: 0 20rpx;
-  border-radius: 10rpx;
+.add-message-modal .bg{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
-.add-message .btn{
-  flex: 0 0 auto;
-  width: 180rpx;
-  height: 100rpx;
+.add-message-modal .modal-content{
+  width: 100%;
+  height: 100%;
+  position: relative;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  line-height: 100rpx;
-  background-color: red;
-  color: #FFF;
-  margin-left: 10rpx;
+  padding: 178rpx 120rpx 0 140rpx;
+}
+.add-message-modal .input{
+  width: 100%;
+  height: 300rpx;
+  line-height: 1.3;
+}
+.add-message-modal .name{
+  position: absolute;
+  z-index: 2;
+  right: 120rpx;
+  top: 505rpx;
+  text-align: right;
+}
+.add-message-modal .btn{
+  position: absolute;
+  z-index: 3;
+  right: 80rpx;
+  top: 600rpx;
+  height: 100rpx;
+  text-align: right;
+  background-color: transparent;
+}
+
+.modal_show {
+  animation: slide-top 0.5s ease-out both;
+}
+.modal_hide {
+  animation: slide-down 0.5s ease-out both;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(0.88);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.88);
+  }
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes slide-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }

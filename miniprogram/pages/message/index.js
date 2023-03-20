@@ -3,32 +3,80 @@ const app = getApp() // 全局APP
 Page({
   data: {
     list: [],
+    tweenList: [],
     message: '',
     loading: false,
     nickname: '',
+    isMessageModalShow: false,
+    colors: ['#EFC447', '#EC828D', '#ACC55F', '#7DC2E9'],
   },
 
   onShow () {
     this.init() 
   },
+  onUnload() {
+    this.clearTimer();
+  },
 
   async init () {
+    this.clearTimer()
     const result = await app.call({ name: 'getlist' })
     const nickname = this.data.nickname || wx.getStorageSync('nickname') || ''
 
     this.setData({
-      list: result || [],
+      list: this.formatList(result || []),
+      tweenList: [],
       nickname,
     })
 
-    this.scroll()
+    this.tween(0)
+  },
+  clearTimer () {
+    if (this.timer) {
+      clearTimeout(this.timer)
+      this.timer = null
+    }
+  },
+
+  formatList (list) {
+    return list.map(item => {
+      return {
+        nickname: item.nickname,
+        time: app.formatDate(item.time),
+        text: item.text,
+        color: app.randomPick(this.data.colors)
+      }
+    })
+  },
+
+  tween (index) {
+    if (index === this.data.list.length) return false
+
+    this.setData({
+      [`tweenList[${index}]`]: this.data.list[index]
+    }, () => {
+      this.scroll()
+      this.timer = setTimeout(() => {
+        this.tween(index + 1)
+      }, 1000)
+    })
   },
 
   scroll () {
-    const len = this.data.list.length
     wx.pageScrollTo({
       selector: '#bottom',
-      duration: len * 1000,
+      duration: 100,
+    })
+  },
+
+  handleBtnAddMessage () {
+    this.setData({
+      isMessageModalShow: true,
+    })
+  },
+  handleHideMessageModal () {
+    this.setData({
+      isMessageModalShow: false,
     })
   },
 
@@ -46,7 +94,7 @@ Page({
     })
     wx.setStorageSync('nickname', nickname)
   },
-  async handleAddMessage () {
+  async handleBtnSaveMessage () {
     if (!this.data.nickname) {
       app.toast('请输入姓名')
       return false
@@ -57,7 +105,8 @@ Page({
     }
 
     this.setData({
-      loading: true
+      loading: true,
+      isMessageModalShow: false,
     })
     wx.showLoading({ // 显示加载中
       title: '留言中',

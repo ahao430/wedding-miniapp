@@ -63,8 +63,8 @@
       <view class="title-1">婚礼邀请</view>
       <view class="title-2">王  昊 & 吴凤媛</view>
 
-      <view class="btn-zhufu" bindtap="handleLeaveMessage">写下祝福</view>
-      <view class="btn-more" bindtap="handleGoGallery">更多照片</view>
+      <view class="btn-zhufu" bindtap="handleLeaveMessage">去祝福</view>
+      <view class="btn-more" bindtap="handleGoGallery">没看够</view>
     </view>
   </view>
 

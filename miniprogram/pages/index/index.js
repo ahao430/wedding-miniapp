@@ -139,13 +139,13 @@ Page({
     this.clearTimer();
     let {epage, len, pictures} = that.data;
     if (epage === 0) {
-      wait = 6000;
+      wait = 8000;
     } else if (epage === len - 2) {
-      wait = 6000;
+      wait = 8000;
     } else if (epage === len - 1) {
-      wait = 6000;
+      wait = 8000;
     } else {
-      wait = pictures[epage - 1].wait || 3000;
+      wait = pictures[epage - 1].wait || 5000;
     }
 
     this.timer = setTimeout(() => {

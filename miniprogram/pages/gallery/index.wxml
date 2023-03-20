@@ -4,7 +4,7 @@
   <image class="bg" src="{{tools.img(bg)}}" lazy-load mode="aspectFill"></image>
   <view class="group-list">
     <view class="group" wx:for="{{images}}" wx:key="index" data-index="{{index}}" bindtap="handleClickGroup">
-      <image class="bg" lazy-load src="{{tools.img(item.path, item.bg)}}" mode="aspectFill"></image>
+      <image class="bg" src="{{tools.img(item.path, item.bg)}}" mode="aspectFill"></image>
       <view class="title">{{item.name}}</view>
     </view>
   </view>
